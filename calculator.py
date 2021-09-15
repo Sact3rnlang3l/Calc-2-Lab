@@ -6,7 +6,7 @@ from arithmetic import (add, subtract, multiply, divide, square, cube,
 while True:
     equation = input('Put your Maths here \n')
     tokens = equation.split(' ')
-
+    print(tokens)
     if 'q' in tokens:
         print('Goodbye Then')
         break
@@ -23,9 +23,6 @@ while True:
 
     else:
         num2 = tokens[2]
-
-    if len(tokens) > 3:
-        num3 = tokens[3]
 
     answer = None
 
@@ -57,5 +54,8 @@ while True:
     elif ops == 'mod' or 'modus':
         answer = mod(float(num1),float(num2))
     
+    else:
+        answer = 'Try Again'
+
     print(answer)
 
